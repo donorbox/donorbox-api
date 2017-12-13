@@ -142,7 +142,7 @@ Donorbox API supports pagination for all their GET endpoints. The paging mechani
 
 Example:
 
-{METHOD} https://donorbox.org/{endpoint}.json?page=2 `
+{GET} https://donorbox.org/{endpoint}.json?page=2 `
 
 
 
