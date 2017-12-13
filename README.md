@@ -93,7 +93,7 @@ Output:
     "donating_company":null,
     "currency":"USD",
     "processing_fee":"0.59",
-    "formatted_processing_fee":"$0.01",
+    "formatted_processing_fee":"$0.59",
     "questions":[]
   }
 ]
