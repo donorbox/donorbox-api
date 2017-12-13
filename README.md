@@ -135,3 +135,14 @@ Output:
   }
 ]
 ```
+
+## Pagination
+
+Donorbox API supports pagination for all their GET endpoints. The paging mechanism is very easy to use. The default pagination for all end points is 50 records.
+
+Example:
+
+{METHOD} https://donorbox.org/{endpoint}.json?page=2 `
+
+
+
