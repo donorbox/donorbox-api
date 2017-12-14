@@ -21,7 +21,7 @@ All the API calls will need a basic authentication, you need to send a username 
 
 Get information for all your campaigns.
 
-` {GET} https://donorbox.org//api/v1/campaigns`
+` {GET} https://donorbox.org/api/v1/campaigns`
 
 Output:
 
@@ -49,7 +49,7 @@ Output:
 
 Get all your organization's donations.
 
-` {GET} https://donorbox.org//api/v1/donations`
+` {GET} https://donorbox.org/api/v1/donations`
 
 Output:
 
@@ -102,7 +102,7 @@ Output:
 
 Get information for all your donors.
 
-` {GET} https://donorbox.org//api/v1/donors`
+` {GET} https://donorbox.org/api/v1/donors`
 
 Output:
 
@@ -138,11 +138,9 @@ Output:
 
 ## Pagination
 
-Donorbox API supports pagination for all their GET endpoints. The paging mechanism is very easy to use. The default pagination for all end points is 50 records.
+Donorbox API paging mechanism is very easy to use. The default pagination for the end points is 50 records.
 
-Example:
+Pagination is supported for the following GET endpoints.
 
-{GET} https://donorbox.org/{endpoint}.json?page=2 `
-
-
-
+* Donors. Ex: {GET} https://donorbox.org/api/v1/donors.json?page=2
+* Donations. Ex: {GET} https://donorbox.org/api/v1/donations.json?page=2`
