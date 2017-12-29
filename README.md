@@ -2,7 +2,6 @@
 
 ## Getting Started
 
-Get your invitation at: **https://zapier.com/developer/invite/83254/aa4115a8d91d58757afee99e9b6ca5e1/**
 
 You’ll need a API KEY to connect to Donorbox. To create a key, you’ll need to sign up at https://donorbox.org. After you register in Donorbox click **Account in top navigation**, then click **API Key in left navigation** and click **Set new api key**. 
 
