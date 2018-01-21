@@ -101,23 +101,27 @@ Output:
     "processing_fee":"0.59",
     "formatted_processing_fee":"$0.59",
     "questions": [
-      {
+        {
+          "question_type": "radiobutton",
           "question": "Would you like to volunteer?",
           "answer": "Yes"
-      },
-      {
+        },
+        {
+          "question_type": "text",
           "question": "Why are you donating",
           "answer": "I would like to help"
-      },
-      {
+         },
+         {
+          "question_type": "check",
           "question": "First/Last Name is correct?",
-          "answer": "on"
-      },
-      {
+          "answer": true
+         },
+         {
+          "question_type": "dropdown",
           "question": "Would you like to showcase your donation",
           "answer": "Yes"
-      }
-    ]
+         }
+      ]
   }
 ]
 ```
@@ -158,6 +162,12 @@ Output:
   }
 ]
 ```
+
+## Filters
+
+g
+
+
 
 ## Pagination
 
