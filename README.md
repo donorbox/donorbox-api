@@ -49,8 +49,6 @@ Output:
 ]
 ```
 
-
-
 ### Donations
 
 Get all your organization's donations.
@@ -125,6 +123,7 @@ Output:
   }
 ]
 ```
+
 ### Donors
 
 Get information for all your donors.
@@ -162,12 +161,35 @@ Output:
   }
 ]
 ```
-
 ## Filters
 
-g
+Donorbox allows you add several filters to your donations. 
 
+### Search by Campaign ID
 
+Get all the donations of a specific campaign:
+
+`{GET} https://donorbox.org/api/v1/donation?campaign_id=XX`
+
+### Number of donations per page
+
+Set up the number of donations that you require per page
+
+`{GET} https://donorbox.org/api/v1/donations?per_page=XX`
+
+### Order Donations
+
+Order your donations ascending or descending
+
+`{GET} https://donorbox.org/api/v1/donations?order=asc`
+
+`{GET} https://donorbox.org/api/v1/donations?order=desc`
+
+### Combine filter
+
+You can combine any of the filters described before. Ex:
+
+`{GET} https://donorbox.org/api/v1/donations?order=asc&per_page=XX&campaign_id=XX`
 
 ## Pagination
 
