@@ -86,10 +86,10 @@ Output:
         "first_recurring_donation": false,
         "amount_refunded": "0.0",
         "formatted_amount_refunded": "$0",
-        "stripe_charge_id": "ch_1BF94aBku99FiTp3uJM5mSKw",
+        "stripe_charge_id": "ch_1BF94aBku99FiTp3uJM5mSKw", // || paypal_transaction_id: "RANDOMPAYPALID",
         "id": 1,
         "status": "paid",
-        "donation_type": "stripe",
+        "donation_type": "stripe", // || "donation_type": "paypal"
         "donation_date": "2017-12-21T17:54:13.432Z",
         "anonymous_donation": false,
         "gift_aid": false,
