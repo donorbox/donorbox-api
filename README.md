@@ -57,7 +57,7 @@ Get all your organization's donations.
 
 Output:
 
-```json
+```json5
 [
     {
         "campaign": {
