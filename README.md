@@ -7,7 +7,7 @@ You’ll need a API KEY to connect to Donorbox. To create a key, you’ll need t
 
 If you are looking to integrate with **[Zapier](https://zapier.com)**, please follow the guide at https://github.com/donorbox/donorbox-api/wiki/Getting-started-with-Zapier
 
-![Donorbox Api](https://github.com/donorbox/donorbox-api/wiki/images/zapier/dbox_zap_02_api_key.png)
+![Donorbox Api](https://github.com/donorbox/donorbox-api/wiki/images/dbox_zap_02_api_key.png)
 
 
 **Copy the generated API key** to some place safe as this key will only be **shown once for security** reasons.
