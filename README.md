@@ -93,6 +93,8 @@ Output:
         "donation_date": "2017-12-21T17:54:13.432Z",
         "anonymous_donation": false,
         "gift_aid": false,
+        "designation": "Designed Cause",
+        "join_mailing_list": false,
         "comment": "thanks",
         "donating_company": null,
         "currency": "USD",
