@@ -18,11 +18,24 @@ If you are looking to integrate with **[Zapier](https://zapier.com)**, please fo
 
 ## Make API calls to Donorbox
 
+All the API calls will need a basic authentication, you need to send a username which is your organization email and a password which is your API KEY.
+
+To make call using cURL use 
+
+`curl --user login@email.com:API_KEY_XXX https://donorbox.org/{endpoint}` 
+
+The general format for basic authentication on Donorbox is
+
+`https://login@email.com:API_KEY_XXX@donorbox.org/{endpoint}`
+
+If your browser does not support this basic authentication url pattern, kindly use the basic endpoint url `https://donorbox.org/{endpoint}` without email and password and provide these credentials on popup. 
+
+Throughout the rest of document we will use example urls without basic authentication format for simplicity, but it should be nothed that all the calls are with Basic authentication. 
+
 Each HTTP request consists of an HTTP Method and an endpoint. Throughout the documentation, these requests are formatted like the following example.
 
 ` {METHOD} https://donorbox.org/{endpoint} `
 
-All the API calls will need a basic authentication, you need to send a username which is your organization email and a password which is your API KEY.
 ### Campaigns
 
 Get information for all your campaigns.
@@ -200,5 +213,5 @@ Donorbox API paging mechanism is very easy to use. The default pagination for th
 
 Pagination is supported for the following GET endpoints.
 
-* Donors. Ex: {GET} https://donorbox.org/api/v1/donors.json?page=2
-* Donations. Ex: {GET} https://donorbox.org/api/v1/donations.json?page=2`
+* Donors. Ex: {GET} https://donorbox.org/api/v1/donors?page=2
+* Donations. Ex: {GET} https://donorbox.org/api/v1/donations?page=2`
