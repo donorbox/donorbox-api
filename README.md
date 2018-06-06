@@ -68,7 +68,7 @@ Get all your organization's donations.
 
 ` {GET} https://donorbox.org/api/v1/donations`
 
-Output:
+Output (Stripe):
 
 ```json
 [
@@ -108,6 +108,76 @@ Output:
         "gift_aid": false,
         "designation": "Designed Cause",
         "join_mailing_list": false,
+        "comment": "thanks",
+        "donating_company": null,
+        "currency": "USD",
+        "converted_currency": "USD",
+        "processing_fee": 0.59,
+        "formatted_processing_fee": "$0.59",
+        "questions": [
+            {
+              "question_type": "radiobutton",
+              "question": "Would you like to volunteer?",
+              "answer": "Yes"
+            },
+            {
+              "question_type": "text",
+              "question": "Why are you donating",
+              "answer": "I would like to help"
+             },
+             {
+              "question_type": "check",
+              "question": "First/Last Name is correct?",
+              "answer": true
+             },
+             {
+              "question_type": "dropdown",
+              "question": "Would you like to showcase your donation",
+              "answer": "Yes"
+             }
+        ]
+    }
+]
+```
+
+Output (PayPal):
+
+```json
+[
+    {
+        "campaign": {
+            "id": 1,
+            "name": "Donorbox Campaign"
+        },
+        "donor": {
+            "id": 59,
+            "name": "John Doe",
+            "first_name": "John",
+            "last_name": "Doe",
+            "email": "johndoeemail@hotmail.com",
+            "address":"123 6th St. Melbourne, FL 32904",
+            "city":"Melbourne",
+            "state":"FL",
+            "zip_code": "32904",
+            "country":"USA",
+            "employer":null,
+            "occupation":null
+        },
+        "amount": "100.0",
+        "formatted_amount": "$100",
+        "converted_amount": "100.0",
+        "formatted_converted_amount": "$100",
+        "recurring": false,
+        "first_recurring_donation": false,
+        "amount_refunded": "0.0",
+        "formatted_amount_refunded": "$0",
+        "paypal_transaction_id": "RANDOMPAYPALID",
+        "id": 1,
+        "status": "paid",
+        "donation_type": "paypal",
+        "donation_date": "2017-12-21T17:54:13.432Z",
+        "anonymous_donation": false,
+        "gift_aid": false,
         "comment": "thanks",
         "donating_company": null,
         "currency": "USD",
