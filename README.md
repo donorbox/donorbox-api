@@ -218,7 +218,7 @@ Get information for all your plans.
 
 ### Filter by donor email
 
-Get all the donations of a specific campaign:
+Get all the plans for a specific email:
 
 `{GET} https://donorbox.org/api/v1/plans?email=XXXX`
 
