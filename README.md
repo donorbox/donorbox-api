@@ -210,6 +210,56 @@ Output (PayPal):
 ]
 ```
 
+### Plans
+
+Get information for all your plans.
+
+` {GET} https://donorbox.org/api/v1/plans`
+
+### Filter by donor email
+
+Get all the donations of a specific campaign:
+
+`{GET} https://donorbox.org/api/v1/plans?email=XXXX`
+
+
+Output:
+
+```
+[
+  {
+    "id": 168,
+    "campaign": {
+        "id": 61,
+        "name": "Save the jungle campaign"
+    },
+    "donor": {
+        "id": 384,
+        "name": "Bruce Waine",
+        "first_name": "Bruce",
+        "last_name": "Waine",
+        "email": "bruce@email.com",
+        "phone": "8038984624",
+        "address": "123 6th St. Melbourne, FL 32904",
+        "city":"Melbourne",
+        "state":"FL",
+        "zip_code":"32904",
+        "country": "USA",
+        "employer": "Waine Industries",
+        "occupation": "CEO"
+    },
+    "type": "monthly",
+    "amount": "10.0",
+    "formatted_amount": "$10",
+    "payment_method": "Stripe",
+    "started_at": "2018-07-25",
+    "last_donation_date": "2018-07-25T05:00:00.000Z",
+    "next_donation_date": "2018-08-25",
+    "status": "active"
+  }
+]
+```
+
 ### Donors
 
 Get information for all your donors.
