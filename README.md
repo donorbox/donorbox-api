@@ -216,12 +216,6 @@ Get information for all your plans.
 
 ` {GET} https://donorbox.org/api/v1/plans`
 
-### Filter by donor email
-
-Get all the plans for a specific email:
-
-`{GET} https://donorbox.org/api/v1/plans?email=XXXX`
-
 
 Output:
 
@@ -299,33 +293,41 @@ Output:
 ```
 ## Filters
 
-Donorbox allows you add several filters to your donations. 
+Donorbox allows you add several filters to these endpoints
 
-### Search by Campaign ID
+### Search Donations by Campaign ID
 
 Get all the donations of a specific campaign:
 
 `{GET} https://donorbox.org/api/v1/donation?campaign_id=XX`
 
-### Number of donations per page
 
-Set up the number of donations that you require per page
+### Filter Plans by donor email
 
-`{GET} https://donorbox.org/api/v1/donations?per_page=XX`
+Get all the plans for a specific email:
+
+`{GET} https://donorbox.org/api/v1/plans?email=XXXX`
+
+### Filter Plans by campaign id
+
+Get all the plans for a specific email:
+
+`{GET} https://donorbox.org/api/v1/plans?campaign_id=XX`
+
 
 ### Order Donations
 
-Order your donations ascending or descending
+Order your donations ascending or descending, this is available for all endpoints.
 
 `{GET} https://donorbox.org/api/v1/donations?order=asc`
-
 `{GET} https://donorbox.org/api/v1/donations?order=desc`
+`{GET} https://donorbox.org/api/v1/donors?order=asc`
+`{GET} https://donorbox.org/api/v1/donors?order=desc`
+`{GET} https://donorbox.org/api/v1/plans?order=asc`
+`{GET} https://donorbox.org/api/v1/plans?order=desc`
+`{GET} https://donorbox.org/api/v1/campaigns?order=asc`
+`{GET} https://donorbox.org/api/v1/campaigns?order=desc`
 
-### Combine filter
-
-You can combine any of the filters described before. Ex:
-
-`{GET} https://donorbox.org/api/v1/donations?order=asc&per_page=XX&campaign_id=XX`
 
 ## Pagination
 
@@ -335,3 +337,18 @@ Pagination is supported for the following GET endpoints.
 
 * Donors. Ex: {GET} https://donorbox.org/api/v1/donors?page=2
 * Donations. Ex: {GET} https://donorbox.org/api/v1/donations?page=2`
+* Plans. Ex: {GET} https://donorbox.org/api/v1/plans?page=2
+* Campaigns. Ex: {GET} https://donorbox.org/api/v1/campaigns?page=2`
+
+### Number of donations per page
+
+Set up the number of donations that you require per page
+
+`{GET} https://donorbox.org/api/v1/donations?per_page=XX`
+
+## Combine filter
+
+You can combine any of the filters described before. Ex:
+
+`{GET} https://donorbox.org/api/v1/donations?order=asc&per_page=XX&campaign_id=XX`
+
