@@ -315,9 +315,9 @@ Get all the plans for a specific email:
 `{GET} https://donorbox.org/api/v1/plans?campaign_id=XX`
 
 
-### Order Donations
+### Ordering
 
-Order your donations ascending or descending, this is available for all endpoints.
+Order your information ascending or descending, this is available for all endpoints.
 
 `{GET} https://donorbox.org/api/v1/donations?order=asc`
 `{GET} https://donorbox.org/api/v1/donations?order=desc`
