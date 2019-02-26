@@ -18,29 +18,33 @@ If you are looking to integrate with **[Zapier](https://zapier.com)**, please fo
 
 ## Make API calls to Donorbox
 
-All the API calls will need a basic authentication, you need to send a username which is your organization email and a password which is your API KEY.
+Donorbox API uses basic authentication as authorization method. Use your organization login email as authorization username and the API KEY as password.
 
-To make call using cURL use 
+Here is the general format using cURL:
 
-`curl --user login@email.com:API_KEY_XXX https://donorbox.org/{endpoint}` 
+`curl -X METHOD --user login@email.com:YOUR_API_KEY https://donorbox.org/{endpoint}` 
 
-The general format for basic authentication on Donorbox is
+To test our API endpoints directly in WEB browser use following format
 
 `https://login@email.com:API_KEY_XXX@donorbox.org/{endpoint}`
 
-If your browser does not support this basic authentication url pattern, kindly use the basic endpoint url `https://donorbox.org/{endpoint}` without email and password and provide these credentials on popup. 
+If your browser does not support this basic authentication URL pattern, use the endpoint URL `https://donorbox.org/{endpoint}` without email & password and provide these credentials on popup.
 
-Throughout the rest of document we will use example urls without basic authentication format for simplicity, but it should be nothed that all the calls are with Basic authentication. 
+------------------------------------------------------------------
 
-Each HTTP request consists of an HTTP Method and an endpoint. Throughout the documentation, these requests are formatted like the following example.
+This is Donorbox API endpoints URL with appropriate HTTP method
 
-` {METHOD} https://donorbox.org/{endpoint} `
+`{METHOD} https://donorbox.org{endpoint}`
 
+Throughout the documentation we will omit the host name, mentioning only the HTTP `METHOD` and the `endpoint` e.g. `{GET} /api/v1/campaigns`. 
+
+
+## Donorbox API endpoints
 ### Campaigns
 
 Get information for all your campaigns.
 
-` {GET} https://donorbox.org/api/v1/campaigns`
+`{GET} api/v1/campaigns`
 
 Output:
 
@@ -66,7 +70,7 @@ Output:
 
 Get all your organization's donations.
 
-` {GET} https://donorbox.org/api/v1/donations`
+`{GET} /api/v1/donations`
 
 Output (Stripe):
 
@@ -214,7 +218,7 @@ Output (PayPal):
 
 Get information for all your plans.
 
-` {GET} https://donorbox.org/api/v1/plans`
+`{GET} /api/v1/plans`
 
 
 Output:
@@ -258,7 +262,7 @@ Output:
 
 Get information for all your donors.
 
-` {GET} https://donorbox.org/api/v1/donors`
+`{GET} /api/v1/donors`
 
 Output:
 
@@ -291,64 +295,36 @@ Output:
   }
 ]
 ```
+
 ## Filters
 
-Donorbox allows you add several filters to these endpoints
+### Filter by Campaign
+Use `campaign_id` parameter to narrow down the result by a specific campaign. This filter is valid for [Donations](#donations) and [Plans](#plans) endpoints.
 
-### Search Donations by Campaign ID
-
-Get all the donations of a specific campaign:
-
-`{GET} https://donorbox.org/api/v1/donation?campaign_id=XX`
+e.g. `{GET} /api/v1/donation?campaign_id=XX`
 
 
-### Filter Plans by donor email
+### Filter by email
+Use `email` parameter to filter the result by given email address. This filter is valid only for [Plans](#plans) endpoint.
 
-Get all the plans for a specific email:
-
-`{GET} https://donorbox.org/api/v1/plans?email=XXXX`
-
-### Filter Plans by campaign id
-
-Get all the plans for a specific email:
-
-`{GET} https://donorbox.org/api/v1/plans?campaign_id=XX`
+e.g. `{GET} /api/v1/plans?email=XXXX`
 
 
 ### Ordering
+All Donorbox API endpoints support ordering. Use `order` parameter with `asc|desc` possible values. The default is `desc`.
 
-Order your information ascending or descending, this is available for all endpoints.
-
-`{GET} https://donorbox.org/api/v1/donations?order=asc`
-`{GET} https://donorbox.org/api/v1/donations?order=desc`
-`{GET} https://donorbox.org/api/v1/donors?order=asc`
-`{GET} https://donorbox.org/api/v1/donors?order=desc`
-`{GET} https://donorbox.org/api/v1/plans?order=asc`
-`{GET} https://donorbox.org/api/v1/plans?order=desc`
-`{GET} https://donorbox.org/api/v1/campaigns?order=asc`
-`{GET} https://donorbox.org/api/v1/campaigns?order=desc`
+e.g `{GET} /api/v1/donations?order=asc`
 
 
 ## Pagination
+All Donorbox API endpoints support pagination. Provide `page` and `per_page` parameters to split the result accordingly. The default page size(`per_page` parameter's value) is 50, maximum 100 allowed. If it exceeds the maximum, will fallback to default.
 
-Donorbox API paging mechanism is very easy to use. The default pagination for the end points is 50 records.
+e.g. `{GET} /api/v1/donors?page=2&per_page=18`
 
-Pagination is supported for the following GET endpoints.
 
-* Donors. Ex: {GET} https://donorbox.org/api/v1/donors?page=2
-* Donations. Ex: {GET} https://donorbox.org/api/v1/donations?page=2`
-* Plans. Ex: {GET} https://donorbox.org/api/v1/plans?page=2
-* Campaigns. Ex: {GET} https://donorbox.org/api/v1/campaigns?page=2`
+## Combine filters
 
-### Number of donations per page
+Of course, you can combine any of the filters described above, taking into account supported endpoints for a specific filter.
 
-Set up the number of donations that you require per page
-
-`{GET} https://donorbox.org/api/v1/donations?per_page=XX`
-
-## Combine filter
-
-You can combine any of the filters described before. Ex:
-
-`{GET} https://donorbox.org/api/v1/donations?order=asc&per_page=XX&campaign_id=XX`
+e.g. `{GET} /api/v1/donations?order=asc&page=3&per_page=20&campaign_id=XX`
 
