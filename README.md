@@ -316,13 +316,13 @@ All Donorbox API endpoints support ordering. Use `order` parameter with `asc|des
 e.g `{GET} /api/v1/donations?order=asc`
 
 
-## Pagination
+### Pagination
 All Donorbox API endpoints support pagination. Provide `page` and `per_page` parameters to split the result accordingly. The default page size(`per_page` parameter's value) is 50, maximum 100 allowed. If it exceeds the maximum, will fallback to default.
 
 e.g. `{GET} /api/v1/donors?page=2&per_page=18`
 
 
-## Combine filters
+#### Combine filters
 
 Of course, you can combine any of the filters described above, taking into account supported endpoints for a specific filter.
 
