@@ -44,7 +44,7 @@ Throughout the documentation we will omit the host name, mentioning only the HTT
 
 Get information for all your campaigns.
 
-`{GET} api/v1/campaigns`
+`{GET} /api/v1/campaigns`
 
 Output:
 
