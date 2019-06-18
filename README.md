@@ -116,6 +116,11 @@ Output (Stripe):
         "donating_company": null,
         "currency": "USD",
         "converted_currency": "USD",
+        "utm_campaign": "google_ads",
+        "utm_source": "Adwords",
+        "utm_medium": "cpc",
+        "utm_term": "nonprofit fundraising",
+        "utm_content": "np1",
         "processing_fee": 0.59,
         "formatted_processing_fee": "$0.59",
         "questions": [
@@ -186,6 +191,11 @@ Output (PayPal):
         "donating_company": null,
         "currency": "USD",
         "converted_currency": "USD",
+        "utm_campaign": "google_ads",
+        "utm_source": "Adwords",
+        "utm_medium": "cpc",
+        "utm_term": "nonprofit fundraising",
+        "utm_content": "np1",
         "processing_fee": 0.59,
         "formatted_processing_fee": "$0.59",
         "questions": [
