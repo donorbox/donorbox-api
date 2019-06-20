@@ -3,10 +3,10 @@
 ## Getting Started
 
 
-You’ll need an API KEY to connect to Donorbox. To create a key, you’ll need to sign up at https://donorbox.org. After you register with Donorbox, click **Account** in the top navigation, click API & Zapier Integration on the left, and select **Enable API & Zapier Integration**. After you confirm and add your billing information, select **Set new API Key**.
+You’ll need an API KEY to connect to Donorbox. To create a key, you’ll need to sign up at https://donorbox.org. After you register with Donorbox, click **Account** in the top navigation, click **API & Zapier Integration** on the left, and select **Enable API & Zapier Integration**. After you confirm and add your billing information, select **Set new API Key**.
 
 
-Please be aware the **API & Zapier integration** costs $17/month.
+Please be aware that the **API & Zapier integration** costs $17/month.
 
 If you are looking to integrate with **[Zapier](https://zapier.com)**, please follow the guide at https://github.com/donorbox/donorbox-api/wiki/Getting-started-with-Zapier.
 
