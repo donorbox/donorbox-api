@@ -3,28 +3,29 @@
 ## Getting Started
 
 
-You’ll need a API KEY to connect to Donorbox. To create a key, you’ll need to sign up at https://donorbox.org. After you register in Donorbox click **Account in top navigation**, then click **API Key in left navigation** and click **Set new api key**. 
+You’ll need an API KEY to connect to Donorbox. To create a key, you’ll need to sign up at https://donorbox.org. After you register with Donorbox, click **Account** in the top navigation, click API & Zapier Integration on the left, and select **Enable API & Zapier Integration**. After you confirm and add your billing information, select **Set new API Key**.
 
-Please be aware the **API & Zapier integration** has a costs of $17/month
 
-If you are looking to integrate with **[Zapier](https://zapier.com)**, please follow the guide at https://github.com/donorbox/donorbox-api/wiki/Getting-started-with-Zapier
+Please be aware the **API & Zapier integration** costs $17/month.
+
+If you are looking to integrate with **[Zapier](https://zapier.com)**, please follow the guide at https://github.com/donorbox/donorbox-api/wiki/Getting-started-with-Zapier.
 
 ![Donorbox Api](https://github.com/donorbox/donorbox-api/blob/master/preview-lightbox-API2.jpg)
 
 
-**Copy the generated API key** to some place safe as this key will only be **shown once for security** reasons.
+**Copy the generated API key** to a safe place as this key will only be **shown once for security reasons**.
 
 ![donorbox api](https://github.com/donorbox/donorbox-api/wiki/images/copy_api_key.png)
 
 ## Make API calls to Donorbox
 
-Donorbox API uses basic authentication as authorization method. Use your organization login email as authorization username and the API KEY as password.
+Donorbox API uses basic authentication as our authorization method. Use your organization login email as your authorization username and the API Key as your password.
 
 Here is the general format using cURL:
 
 `curl -X METHOD --user login@email.com:YOUR_API_KEY https://donorbox.org/{endpoint}` 
 
-To test our API endpoints directly in WEB browser use following format
+To test our API endpoints directly in a web browser, use the following format:
 
 `https://login@email.com:API_KEY_XXX@donorbox.org/{endpoint}`
 
@@ -32,7 +33,7 @@ If your browser does not support this basic authentication URL pattern, use the 
 
 ------------------------------------------------------------------
 
-This is Donorbox API endpoints URL with appropriate HTTP method
+This is the Donorbox API endpoints URL with appropriate HTTP method:
 
 `{METHOD} https://donorbox.org{endpoint}`
 
@@ -298,14 +299,14 @@ Output:
 
 ## Filters
 
-### Filter by Campaign
+### Filter by campaign
 Use `campaign_id` parameter to narrow down the result by a specific campaign. This filter is valid for [Donations](#donations) and [Plans](#plans) endpoints.
 
 e.g. `{GET} /api/v1/donation?campaign_id=XX`
 
 
 ### Filter by email
-Use `email` parameter to filter the result by given email address. This filter is valid only for [Plans](#plans) endpoint.
+Use `email` parameter to filter the result by a given email address. This filter is valid only for [Plans](#plans) endpoint.
 
 e.g. `{GET} /api/v1/plans?email=XXXX`
 
@@ -317,7 +318,7 @@ e.g `{GET} /api/v1/donations?order=asc`
 
 
 ### Pagination
-All Donorbox API endpoints support pagination. Provide `page` and `per_page` parameters to split the result accordingly. The default page size(`per_page` parameter's value) is 50, maximum 100 allowed. If it exceeds the maximum, will fallback to default.
+All Donorbox API endpoints support pagination. Provide `page` and `per_page` parameters to split the result accordingly. The default page size (`per_page` parameter's value) is 50, maximum 100 allowed. If it exceeds the maximum, it will fallback to default.
 
 e.g. `{GET} /api/v1/donors?page=2&per_page=18`
 
