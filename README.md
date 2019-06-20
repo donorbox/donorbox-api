@@ -9,7 +9,7 @@ Please be aware the **API & Zapier integration** has a costs of $17/month
 
 If you are looking to integrate with **[Zapier](https://zapier.com)**, please follow the guide at https://github.com/donorbox/donorbox-api/wiki/Getting-started-with-Zapier
 
-![Donorbox Api](https://github.com/donorbox/donorbox-api/wiki/images/dbox_zap_02_api_key.png)
+![Donorbox Api](https://github.com/donorbox/donorbox-api/blob/master/preview-lightbox-API2.jpg)
 
 
 **Copy the generated API key** to some place safe as this key will only be **shown once for security** reasons.
