@@ -309,16 +309,25 @@ Output:
 
 ## Filters
 
-### Filter by campaign
-Use `campaign_id` parameter to narrow down the result by a specific campaign. This filter is valid for [Donations](#donations) and [Plans](#plans) endpoints.
+### Campaign Filters
+Use `campaign_id` parameter to narrow down the result by a specific campaign.
 
-e.g. `{GET} /api/v1/donation?campaign_id=XX`
+e.g. `{GET} /api/v1/campaigns?id=XX`
+
+To filter campaigns by campaign name, use:
+
+`{GET} /api/v1/campaigns?name=XXXXXXXX`
 
 
-### Filter by email
+### Plan Filters
 Use `email` parameter to filter the result by a given email address. This filter is valid only for [Plans](#plans) endpoint.
 
 e.g. `{GET} /api/v1/plans?email=XXXX`
+
+Use `date_from` and `date_to` filters to filter plans by date. The valid date formats include: `YYYY-mm-dd YYYY/mm/dd YYYYmmdd dd-mm-YYYY`
+
+e.g. `{GET} /api/v1/plans?date_from=YYYY-mm-dd&date_to=YYYY-mm-dd`
+
 
 
 ### Ordering
