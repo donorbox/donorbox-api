@@ -15,7 +15,7 @@ If you are looking to integrate with **[Zapier](https://zapier.com)**, please fo
 
 **Copy the generated API key** to a safe place as this key will only be **shown once for security reasons**.
 
-![donorbox api](https://github.com/donorbox/donorbox-api/wiki/images/copy_api_key.png)
+![donorbox api](https://github.com/donorbox/donorbox-api/blob/master/preview-Donorbox-API-key.png)
 
 ## Make API calls to Donorbox
 
