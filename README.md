@@ -320,14 +320,37 @@ To filter campaigns by campaign name, use:
 
 
 ### Plan Filters
-Use `email` parameter to filter the result by a given email address. This filter is valid only for [Plans](#plans) endpoint.
+Use `email` parameter to filter the plans by a given donor's email address. This filter is valid only for [Plans](#plans) endpoint.
 
 e.g. `{GET} /api/v1/plans?email=XXXX`
 
-Use `date_from` and `date_to` filters to filter plans by date. The valid date formats include: `YYYY-mm-dd YYYY/mm/dd YYYYmmdd dd-mm-YYYY`
+Use `date_from` and `date_to` filters to filter plans by started date. The valid date formats include: `YYYY-mm-dd YYYY/mm/dd YYYYmmdd dd-mm-YYYY`
 
 e.g. `{GET} /api/v1/plans?date_from=YYYY-mm-dd&date_to=YYYY-mm-dd`
 
+Use `campaign_id` filter to filter plans by campaign id. This is the Donorbox campaign id.
+
+e.g. `{GET} /api/v1/plans?campaign_id=XXXX`
+
+Use `campaign_name` filter to filter plans by campaign name. This is the Donorbox campaign title that you have defined in Donorbox.
+
+e.g. `{GET} /api/v1/plans?campaign_name=XXXXXXX`
+
+Use `donor_id` filter to filter plans by Donorbox donor id. This is the Donorbox generated donor id.
+
+e.g. `{GET} /api/v1/plans?donor_id=XXXXXXX`
+
+Use `first_name` filter to filter plans by donor's first name.
+
+e.g. `{GET} /api/v1/plans?first_name=XXXXXXX`
+
+Use `last_name` filter to filter plans by donor's last name.
+
+e.g. `{GET} /api/v1/plans?last_name=XXXXXXX`
+
+Use `donor_name` filter to filter plans by donor's full name. Note this filter would be similar to using the first_name and last_name paramters in conjunction like `first_name=XXXX&last_name=YYYYYY` 
+
+e.g. `{GET} /api/v1/plans?last_name=XXXXXXX XXXXX`
 
 
 ### Ordering
