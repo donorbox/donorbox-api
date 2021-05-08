@@ -377,6 +377,39 @@ e.g. `{GET} /api/v1/donors?email=XXXXXXX`
 
 ### Donation Filters
 
+Use `email` filter to filter and get donations by donor's email.
+
+e.g. `{GET} /api/v1/donations?email=XXXXXXX`
+
+Use `date_from` and `date_to` filters to filter donations by started date. The valid date formats include: `YYYY-mm-dd YYYY/mm/dd YYYYmmdd dd-mm-YYYY`
+
+e.g. `{GET} /api/v1/donations?date_from=YYYY-mm-dd&date_to=YYYY-mm-dd`
+
+Use `campaign_name` filter to filter donations by campaign name. This is the Donorbox campaign title that you have defined in Donorbox.
+
+e.g. `{GET} /api/v1/donations?campaign_name=XXXXXXX`
+
+Use `campaign_id` filter to filter donations by campaign id. This is the Donorbox campaign id.
+
+e.g. `{GET} /api/v1/donations?campaign_id=XXXX`
+
+Use `id` filter to filter donations by Donorbox donation id. This is the Donorbox generated donation id.
+
+e.g. `{GET} /api/v1/donations?id=XXX`
+
+Use `first_name` filter to filter and get donations by donor's first name.
+
+e.g. `{GET} /api/v1/donations?first_name=XXXXXXX`
+
+Use `last_name` filter to filter and get donations by donor's last name.
+
+e.g. `{GET} /api/v1/donations?last_name=XXXXXXX`
+
+Use `donor_id` filter to filter and get donations by donor's id. This is the Donorbox generated donor id
+
+e.g. `{GET} /api/v1/donations?donor_id=XXXXXXX`
+
+
 ### Ordering
 All Donorbox API endpoints support ordering. Use `order` parameter with `asc|desc` possible values. The default is `desc`.
 
