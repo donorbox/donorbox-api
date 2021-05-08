@@ -353,6 +353,30 @@ Use `donor_name` filter to filter plans by donor's full name. Note this filter w
 e.g. `{GET} /api/v1/plans?last_name=XXXXXXX XXXXX`
 
 
+### Donor Filters
+
+Use `id` filter to filter donors by Donorbox donor id. This is the Donorbox generated donor id.
+
+e.g. `{GET} /api/v1/donors?id=XXX`
+
+Use `first_name` filter to filter and get donors by donor's first name.
+
+e.g. `{GET} /api/v1/donors?first_name=XXXXXXX`
+
+Use `last_name` filter to filter and get donors by donor's last name.
+
+e.g. `{GET} /api/v1/donors?last_name=XXXXXXX`
+
+Use `donor_name` filter to filter donors by donor's full name. Note this filter would be similar to using the first_name and last_name paramters in conjunction like `first_name=XXXX&last_name=YYYYYY` 
+
+e.g. `{GET} /api/v1/donors?last_name=XXXXXXX XXXXX`
+
+Use `email` filter to filter and get donors by donor's email.
+
+e.g. `{GET} /api/v1/donors?email=XXXXXXX`
+
+### Donation Filters
+
 ### Ordering
 All Donorbox API endpoints support ordering. Use `order` parameter with `asc|desc` possible values. The default is `desc`.
 
