@@ -409,6 +409,12 @@ Use `donor_id` filter to filter and get donations by donor's id. This is the Don
 
 e.g. `{GET} /api/v1/donations?donor_id=XXXXXXX`
 
+Use `amount` filter to filter and get donations by donation amounts.
+
+e.g. `{GET} /api/v1/donations?amount[usd][min]=XXX&amount[usd][max]=YYYY`
+
+Please note that you can use min and max together to fetch donations in a certain range. You can also use min and max params alone if you want to fetch all the donations above or below a certain threshold.
+
 
 ### Ordering
 All Donorbox API endpoints support ordering. Use `order` parameter with `asc|desc` possible values. The default is `desc`.
@@ -426,5 +432,5 @@ e.g. `{GET} /api/v1/donors?page=2&per_page=18`
 
 Of course, you can combine any of the filters described above, taking into account supported endpoints for a specific filter.
 
-e.g. `{GET} /api/v1/donations?order=asc&page=3&per_page=20&campaign_id=XX`
+e.g. `{GET} /api/v1/donations?order=asc&page=3&per_page=20&campaign_id=XX&&amount[usd][max]=YYYY`
 
