@@ -236,7 +236,7 @@ Get information for all your plans.
 
 Output:
 
-```
+```json
 [
   {
     "id": 168,
