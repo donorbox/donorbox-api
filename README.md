@@ -309,6 +309,143 @@ Output:
 ]
 ```
 
+### Events
+
+Get information for all your campaigns.
+
+`{GET} /api/v1/events`
+
+Output:
+
+```json
+[
+  {
+    "id": 123123,
+    "name": "Concert for a Cure",
+    "slug": "concert-for-a-cure",
+    "currency": "usd",
+    "created_at": "2023-10-03T20:44:18Z",
+    "updated_at": "2023-10-23T06:19:43Z",
+    "total_raised": 0,
+    "formatted_total_raised": "$0",
+    "donations_count": 0,
+    "tickets_count": 8
+  }
+]
+```
+
+### Tickets
+
+Get information for all your campaigns.
+
+`{GET} /api/v1/tickets`
+
+Output:
+
+```json
+[
+  {
+    "id": 123456,
+    "currency": "USD",
+    "free_ticket": false,
+    "price": 1.04,
+    "price_formatted": "$1.04",
+    "ticket_type": {
+      "id": 15132,
+      "name": "General Admission",
+      "fair_market_value": 0.4,
+      "fair_market_value_formatted": "$0.40",
+      "tax_deductible_amount": 0.6,
+      "tax_deductible_amount_formatted": "$0.60",
+      "tax_amount": 0.04,
+      "tax_amount_formatted": "$0.04"
+    },
+    "event": {
+      "id": 123123,
+      "name": "Concert for a Cure"
+    },
+    "transaction": {
+      "id": 212321,
+      "city": "Alexandria",
+      "state": "Viginia",
+      "country": "US",
+      "zip": "22304",
+      "currency": "USD",
+      "first_name": "Jimmy",
+      "last_name": "Wang",
+      "donation_id": null,
+      "stripe_charge_id": "py_dhjfkxnh",
+      "full_name": "Jimmy Wang",
+      "address": "4801 Kenmore Ave",
+      "phone": "8509608580",
+      "email": "jw@example.org",
+      "supporter_id": 9635959,
+      "status": "paid",
+      "purchase_date": "2023-10-04T16:50:33Z",
+      "free_purchase": false,
+      "price": 0.82,
+      "price_formatted": "$0.82",
+      "donation_amount": null,
+      "donation_amount_formatted": null,
+      "app_fee": 0.01,
+      "app_fee_formatted": "$0.01",
+      "stripe_fee": 0.33,
+      "stripe_fee_formatted": "$0.33",
+      "slug": "212321-hsdemhehe",
+      "preferences_answer": null
+    }
+  }
+]
+```
+
+### Purchases
+
+Get information for all your campaigns.
+
+`{GET} /api/v1/purchases`
+
+Output:
+
+```json
+[
+  {
+    "id": 231234,
+    "currency": "USD",
+    "status": "paid",
+    "supporter_id": 986732,
+    "amount": 0.82,
+    "amount_formatted": "$0.82",
+    "amount_refunded": 0.82,
+    "date": "2023-10-04T16:50:33Z",
+    "tickets_count": 1,
+    "preferences_answer": null,
+    "event": {
+      "id": 123123,
+      "name": "Concert for a Cure"
+    },
+    "tickets": [
+      {
+        "id": 675645,
+        "currency": "USD",
+        "free_ticket": false,
+        "price": 1.04,
+        "price_formatted": "$1.04",
+        "ticket_type": {
+          "id": 87678,
+          "name": "General Admission",
+          "fair_market_value": 0.4,
+          "fair_market_value_formatted": "$0.40",
+          "tax_deductible_amount": 0.6,
+          "tax_deductible_amount_formatted": "$0.60",
+          "tax_amount": 0.04,
+          "tax_amount_formatted": "$0.04"
+        }
+      }
+    ]
+  }
+]
+```
+
 ## Filters
 
 ### Campaign Filters
@@ -416,6 +553,19 @@ Use `amount` filter to filter and get donations by donation amounts.
 e.g. `{GET} /api/v1/donations?amount[usd][min]=XXX&amount[usd][max]=YYYY`
 
 Please note that you can use min and max together to fetch donations in a certain range. You can also use min and max params alone if you want to fetch all the donations above or below a certain threshold.
+
+
+### Ticket filters
+
+Use `payment_status=refunded` to fetch only refunded tickets.
+
+e.g. `{GET} /api/v1/tickets?payment_status=refunded`
+
+### Purchase filters
+
+Use `payment_status` to filter purchases by payment status. Valid values are `succeeded`, `pending`, `failed`, and `refunded`. It defaults to `succeeded` if any invalid value is passed.
+
+e.g. `{GET} /api/v1/purchases?payment_status=refunded`
 
 
 ### Ordering
