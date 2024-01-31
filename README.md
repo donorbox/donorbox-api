@@ -398,7 +398,7 @@ Output:
 ]
 ```
 
-### Purchases
+### Event ticket purchases
 
 Get information for all your campaigns.
 
