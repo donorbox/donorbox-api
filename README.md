@@ -80,6 +80,7 @@ Output (Stripe):
 ```json
 [
     {
+        "action": "new",
         "campaign": {
             "id": 1,
             "name": "Donorbox Campaign"
@@ -91,10 +92,11 @@ Output (Stripe):
             "last_name": "Doe",
             "email": "johndoeemail@hotmail.com",
             "address":"123 6th St.",
+            "address_line_2":"Lakeside Road",
             "city":"Melbourne",
             "state":"FL",
             "zip_code": "32904",
-            "country":"USA",
+            "country":"US",
             "employer":null,
             "occupation":null
         },
@@ -126,6 +128,14 @@ Output (Stripe):
         "utm_content": "np1",
         "processing_fee": 0.59,
         "formatted_processing_fee": "$0.59",
+        "address": "123 6th St.",
+        "address_line_2": "Lakeside Road",
+        "city": "Melbourne",
+        "state": "FL",
+        "zip_code": "32904",
+        "country": "US",
+        "employer": null,
+        "occupation": null,
         "questions": [
             {
               "question_type": "radiobutton",
