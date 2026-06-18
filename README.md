@@ -6,7 +6,7 @@
 You’ll need an API KEY to connect to Donorbox. To create a key, you’ll need to sign up at https://donorbox.org. After you register with Donorbox, click **Account** in the top navigation, click **API & Zapier Integration** on the left, and select **Enable API & Zapier Integration**. After you confirm and add your billing information, select **Set new API Key**.
 
 
-Please note that access to the Donorbox API costs $17/month. Zapier integration is available separately and may have its own associated costs.
+Please note that access to the Donorbox Zapier & API integration is included in the Pro plan or available as an add-on for $17/month.
 
 Donorbox provides webhooks too for all the API endpoints documented in this guide. Take a look at the following document if you are looking to enable webhooks on your custom endpoints instead of polling the APIs: **[Custom Webhooks Configuration in Donorbox](https://donorbox.zendesk.com/hc/en-us/articles/4733681068820-Custom-Webhooks)**
 
